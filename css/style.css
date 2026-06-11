@@ -11,8 +11,8 @@
   --serif:'Montserrat',-apple-system,Segoe UI,Roboto,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:var(--serif);color:#1d2530;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:var(--serif);color:#1d2530;background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%;max-width:100%;}
 img{max-width:100%;display:block;}
 a{text-decoration:none;}
 
@@ -68,6 +68,9 @@ section[id]{scroll-margin-top:66px;}
 @media(max-width:768px){
   .hero-cta{position:static;align-items:stretch;width:100%;padding:16px 16px 30px;background:var(--darker);bottom:auto;right:auto;}
   .hero-scroll{display:none;}
+  /* no celular: banner parado e limpo (sem zoom/raios, que ficavam "dançando") */
+  .hero-img{animation:none!important;transform:none!important;}
+  .hero-rays,.hero-headlight{display:none;}
 }
 
 /* ===== sobre ===== */
